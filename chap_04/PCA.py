@@ -2,7 +2,8 @@
 PCA (Principal Component Analysis)
 
 - 매트릭스 형태의 데이터를 3개의 메트릭스로 구분하면서 매트릭스를 구성하고 있는 잠재된 성분을 찾아내는 기법
-- PCA는 Karl Pearson이 1901 년에 발명한 통계 기법으로 직교 변환을 사용하여 변수 집합을 주성분이라고 하는 선형적으로 상관되지 않은 변수 집합으로 매핑.
+- PCA는 Karl Pearson이 1901 년에 발명한 통계 기법으로 직교 변환을 사용하여 변수 집합을 주성분이라고 하는
+  선형적으로 상관되지 않은 변수 집합으로 매핑.
 - PCA는 원래 데이터세트의 공분산 행렬의 SVD(Singular Value Decomposition)를 기반으로 한다.
   이러한 분해(decomposition)의 고유 벡터는 회전변환 행렬(rotation matrix)로 사용된다.
   고유 벡터는 설명된 분산에 따라 내림차순으로 회전변환 행렬에 배열.
