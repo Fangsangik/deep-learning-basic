@@ -63,7 +63,7 @@ y_train[0] = 5
 y_train[0:10] = [5 0 4 1 9 2 1 3 1 4]
 보시다시피 y_train[0] = 5
 그래서 to_categorical(y_train)[0]이 [0. 0. 0. 0. 0. 1. 0. 0. 0. 0.]가 되는 것
-5번째 인덱스(0부터 시작하므로 실제로는 6번째 위치)에 1이 있고 나머지는 0입니다.
+5번째 인덱스(0부터 시작하므로 실제로는 6번째 위치)에 1이 있고 나머지는 0
 """
 y_train_onehot = tf.keras.utils.to_categorical(y_train)
 print(y_train_onehot[0])
@@ -87,6 +87,8 @@ test_ds = tf.data.Dataset.from_tensor_slices((x_test_scaled, y_test_onehot)).bat
 model = tf.keras.Sequential()
 # filter 6개, kernel size 5x5, padding='same' -> input과 output의 크기가 같음, input shape 28x28x1
 # color -> 28x28x3
+# +a -> 흑백 이미지에서도 dropout을 사용 할때가 있음
+# - X-ray, MRI / 큰 흑백 모델
 model.add(Conv2D(6, kernel_size=5, padding='same', input_shape=(28, 28, 1)))
 # 활성화 함수로 relu 사용
 model.add(Activation('relu'))
